@@ -1,0 +1,30 @@
+<div class="container-fluid">
+
+    <div class="row alert alert-danger">
+        <div class="col-md-6 col-md-offset-3">
+            <p>Esta ação excluirá permanentemente o cliente abaixo.</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <ul class="list-group">
+                <li class="list-group-item"><b>Empresa: </b>{{ client.name}}</li>
+                <li class="list-group-item"><b>Responsavel: </b>{{ client.responsible}}</li>
+                <li class="list-group-item"><b>E-mail</b>: {{ client.email}}</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 col-md-offset-4">
+                <div class="form-group">
+                    <div class="col-md-6 col-md-offset-4">
+                        <a ng-href="/#/clients">Não apagar</a>
+                        <button type="submit" ng-click="remove()" class="btn btn-danger pull-right">Excluir  Cliente</button>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+</div>

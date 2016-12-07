@@ -1,0 +1,72 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <!--<div class="alert alert-danger" ng-show="error.error">-->
+                <!--<strong>Oops!</strong> Ocorreram alguns error<br><br>-->
+                <!--<div>-->
+                    <!--{{ error.message }}-->
+                <!--</div>-->
+            <!--</div>-->
+            <form class="form-horizontal" name="form" role="form" method="PUT" ng-submit="save()">
+                <div class="form-group" ng-class="{'has-error': !form.name.$valid && form.name.$touched }">
+                    <label class="col-md-4 control-label">Nome</label>
+                    <div class="col-md-6">
+                        <input type="text" name="name" ng-model="client.name" class="form-control" required>
+                        <div ng-show="form.name.$touched" ng-messages="form.name.$error" class="help-block">
+                            <span ng-message="required">*Campo obrigatório</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group" ng-class="{'has-error': !form.responsible.$valid && form.responsible.$touched }">
+                    <label class="col-md-4 control-label">Responsável</label>
+                    <div class="col-md-6">
+                        <input type="text" name="responsible" ng-model="client.responsible" class="form-control" required>
+                        <div ng-show="form.responsible.$touched" ng-messages="form.responsible.$error" class="help-block">
+                            <span ng-message="required">*Campo obrigatório</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group" ng-class="{'has-error': !form.email.$valid && form.email.$touched }">
+                    <label class="col-md-4 control-label">E-mail</label>
+                    <div class="col-md-6">
+                        <input type="email" name="email" ng-model="client.email" class="form-control" required>
+                        <div ng-show="form.email.$touched" ng-messages="form.email.$error" class="help-block">
+                            <span ng-message="required">*Campo obrigatório</span>
+                            <span ng-message="email">*E-mail Inválido</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group" ng-class="{'has-error': !form.phone.$valid && form.phone.$touched }">
+                    <label class="col-md-4 control-label">Telefone</label>
+                    <div class="col-md-6">
+                        <input type="text" name="phone" ng-model="client.phone" class="form-control" required>
+                        <div ng-show="form.phone.$touched" ng-messages="form.phone.$error" class="help-block">
+                            <span ng-message="required">*Campo obrigatório</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group" ng-class="{'has-error': !form.address.$valid && form.address.$touched }">
+                    <label class="col-md-4 control-label">Endereço</label>
+                    <div class="col-md-6">
+                        <input type="text" name="address" ng-model="client.address" class="form-control" required>
+                        <div ng-show="form.address.$touched" ng-messages="form.address.$error" class="help-block">
+                            <span ng-message="required">*Campo obrigatório</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Observação</label>
+                    <div class="col-md-6">
+                        <textarea name="obs" ng-model="client.obs" class="form-control"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-6 col-md-offset-4">
+                        <button type="submit" class="btn btn-primary pull-right">Cadastrar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

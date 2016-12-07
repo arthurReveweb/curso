@@ -33,9 +33,6 @@ class ClientService
 
     public function create(array $data)
     {
-        //Enviar email
-        // disparar notificacao
-        //Postar Tweet
         try{
             $this->validator->with($data)->passesOrFail();
             return $this->repository->create($data);
