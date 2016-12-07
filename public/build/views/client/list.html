@@ -1,0 +1,39 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="alert alert-danger" ng-show="error.error">
+                <strong>Oops!</strong> Ocorreram alguns error<br><br>
+                <div>
+                    {{ error.message }}
+                </div>
+            </div>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Responsável</th>
+                        <th>E-mail</th>
+                        <th>Telefone</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="o in clients">
+                        <td>{{ o.id }}</td>
+                        <td>{{ o.name }}</td>
+                        <td>{{ o.responsible }}</td>
+                        <td>{{ o.email }}</td>
+                        <td>{{ o.phone }}</td>
+                        <td>
+                            <a href="#" class="btn btn-primary btn-xs">Editar</a>
+                            <a href="#" class="btn btn-danger btn-xs">Excluir</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
